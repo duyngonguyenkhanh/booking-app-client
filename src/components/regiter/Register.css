@@ -1,0 +1,26 @@
+.containerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.containerInput {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px; /* khoảng cách giữa các cột */
+}
+
+.containerInput div {
+  margin-bottom: 16px;
+}
+
+.inputType {
+  display: flex;
+  align-items: center;
+}
+
+.inputType p {
+    margin-right: 10px;
+    font-size: larger;
+}
