@@ -6,7 +6,7 @@ export const LoginUser = createAsyncThunk(
     async (userData, { rejectWithValue }) => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/client/login`,
+          `https://booking-app-backend-134f.onrender.com/api/client/login`,
           {
             method: "POST",
             headers: {

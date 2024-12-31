@@ -6,7 +6,7 @@ export const Homepage = createAsyncThunk(
     async (_,{ rejectWithValue }) => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/client/hotels`,  {
+          `https://booking-app-backend-134f.onrender.com/api/client/hotels`,  {
             method: "GET",
             headers: {
               "Content-Type": "application/json",

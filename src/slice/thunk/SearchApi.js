@@ -6,7 +6,7 @@ export const SearchApi = createAsyncThunk(
     async (searchOb,{ rejectWithValue }) => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/client/hotels/search?city=${searchOb.where}&dateStart=${searchOb.start}&dateEnd=${searchOb.end}&numberOfPeople=${searchOb.numberOfPeple}&numberOfRooms=${searchOb.numberOfRoom}`,  {
+          `https://booking-app-backend-134f.onrender.com/api/client/hotels/search?city=${searchOb.where}&dateStart=${searchOb.start}&dateEnd=${searchOb.end}&numberOfPeople=${searchOb.numberOfPeple}&numberOfRooms=${searchOb.numberOfRoom}`,  {
             method: "GET",
             headers: {
               "Content-Type": "application/json",

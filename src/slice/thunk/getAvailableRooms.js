@@ -7,7 +7,7 @@ export const getAvailableRooms = createAsyncThunk(
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/client/rooms/available?roomIds=${AvailableRooms.ids}&dateStart=${AvailableRooms.start}&dateEnd=${AvailableRooms.end}
+        `https://booking-app-backend-134f.onrender.com/api/client/rooms/available?roomIds=${AvailableRooms.ids}&dateStart=${AvailableRooms.start}&dateEnd=${AvailableRooms.end}
 `,
         {
           method: "POST",

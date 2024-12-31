@@ -6,7 +6,7 @@ export const getTransactionsByUserId = createAsyncThunk(
     async (userId,{ rejectWithValue }) => {
         
         try {
-              const response = await fetch(`http://localhost:5000/api/client/transactions/by-user/?userId=${userId}`, {
+              const response = await fetch(`https://booking-app-backend-134f.onrender.com/api/client/transactions/by-user/?userId=${userId}`, {
                 method: "GET",
                 headers: {
                   "Content-Type": "application/json",
