@@ -1,5 +1,5 @@
 import {
-  BrowserRouter,
+  HashRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
@@ -25,13 +25,13 @@ function App() {
     dispatch((Homepage()));
   }, [dispatch]);
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         {routesConfig.map((route, index) => (
           <Route key={index} path={route.path} element={route.element} />
         ))}
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
