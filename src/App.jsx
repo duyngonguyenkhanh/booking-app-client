@@ -1,8 +1,4 @@
-import {
-  HashRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Hotel from "./pages/hotel/Hotel";
 import List from "./pages/list/List";
@@ -17,21 +13,18 @@ import Register from "./components/regiter/Register";
 import Transaction from "./pages/Transaction/Transaction";
 
 function App() {
-
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(setTokenFromLocalStorage()); // Kiểm tra token từ localStorage mỗi khi ứng dụng khởi chạy
-    dispatch((Homepage()));
+    dispatch(Homepage());
   }, [dispatch]);
   return (
-    <Router>
-      <Routes>
-        {routesConfig.map((route, index) => (
-          <Route key={index} path={route.path} element={route.element} />
-        ))}
-      </Routes>
-    </Router>
+    <Routes>
+      {routesConfig.map((route, index) => (
+        <Route key={index} path={route.path} element={route.element} />
+      ))}
+    </Routes>
   );
 }
 
